@@ -32,7 +32,7 @@ function handleAddButton(){
 }
 
 
-//I'm trying to remove a clicked on div item
+	//I'm trying to remove a clicked on div item
 
 function handleNewTask(){
 	console.log('handleNewTask');
@@ -40,7 +40,7 @@ function handleNewTask(){
 	var newTask = $('#task');
 	var newTaskVal = newTask.val();
 
-
+	list.remove(newTaskVal);
 
 	
 }
