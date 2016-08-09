@@ -11,4 +11,16 @@ h2 {
 form {
   margin: 20%; }
 
+#task {
+  width: 100px;
+  height: 20px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: blue; }
+
+#add {
+  border-width: 1px;
+  border-style: solid;
+  border-color: black; }
+
 /*# sourceMappingURL=style.css.map */
