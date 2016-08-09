@@ -7,22 +7,25 @@
         <script type="text/javascript" src="js.js"></script>
     </head>
     <body>
-        <h2>Show Completed</h2>
+        <button onclick="newPage()">Show Completed</button>
+
+
+
         <h1>Maya's To-Do List</h1>
 
         <div id="todos">
           <input type="checkbox" name="todoItem" value="laundry"> Get Laundry<br>
           <input type="checkbox" name="todoItem" value="lunch" checked="checked"> Eat Lunch<br>
           <input type="checkbox" name="todoItem" value="room" checked="checked"> Clean room<br>
-          <input type="checkbox" name="todoItem" value="book" checked="checked"> Read books<br/><br/>
+          <input type="checkbox" name="todoItem" value="book" checked="checked"> Read books<br/>
+
         </div>
       <hr>
-          <!-- <input type="submit" value="Submit"> -->
-         <button id="add">Add</button>
-       New Task:
+    
+  
+      
 
-      <!-- GM: While the css here works just fine, a more common best practice would be to put it
-           in a separate file and include it on the top of the page.-->
           <input id="task" type="text">
+          <button id="add">Add</button>
     </body>
 </html>
