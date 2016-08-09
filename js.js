@@ -46,7 +46,7 @@ function handleNewTask(){
 	var newTask = $('#todoItem');
 	var newTaskVal = newTask.val();
 
-	//list.remove();
+	list.remove();
 
 	
 }
