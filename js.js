@@ -2,10 +2,9 @@ console.log('hello world');
 
 function setUp(){
 
-	console.log('We are setting up the DOM');
-	document.getElementById('add').onclick = handleAddButton;
-	document.getElementById('todos').onclick = handleNewTask;
 
+	$("#add").click(handleAddButton);
+	$("ul").on("click",'input', handleCheckBoxes);
 
 	$('body').click(function(){
 		console.log('body clicked');
@@ -14,6 +13,9 @@ function setUp(){
 	$('#myForm').click(function(){
 		console.log('form clicked');
 	});
+
+
+
 
 }
 
@@ -26,23 +28,41 @@ function handleAddButton(){
 
 	//list.append("<div>"+newTaskVal+"</div>");
 
-	list.append('<input type="checkbox" name="todoItem"/>' + newTaskVal +'<br>');
+	list.append('<li class="newItem"><input type="checkbox" name="todoItem"><label>' + newTaskVal +'</label></li>');
 
 	//creating an array out of the appended list
 	arrayList.push("<div>"+newTaskVal+"</div>");
 	console.log(arrayList);
+
+	newTask.val('');
+
+
 }
 
 	//I'm trying to remove a clicked on div item
 
-function handleNewTask(){
+function handleCheckBoxes(event){
 	console.log('handleNewTask');
 	var list = $('#todos');
 	var newTask = $('#todoItem');
 	var newTaskVal = newTask.val();
 
-	list.remove();	
+	var cList =  $('.completed');
+
+// $(this).children('input').prop('checked',true);
+
+  if($(this).prop('checked'))
+  {
+  	cList.append($(this).parent());
+  }
+   else{
+   	list.append($(this).parent());
+   }
+	//$(this).remove();
+	
 }
+
+
 
 function newPage(){
 	window.open('form.php');
