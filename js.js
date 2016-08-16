@@ -55,13 +55,13 @@ function handleCheckBoxes(event){
 	
 }
 
-function animation(){
+/*function animation(){
 var title = $('#animate');
 
 	title.fadeIn(1000);
 
 }
-
+*/
 
 function newPage(){
 	window.open('form.php');
