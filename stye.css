@@ -30,4 +30,10 @@ form {
 #todos {
   list-style: none; }
 
+#animate {
+  position: relative; }
+
+li.completed {
+  list-style: none !important; }
+
 /*# sourceMappingURL=stye.css.map */

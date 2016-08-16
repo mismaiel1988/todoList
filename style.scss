@@ -3,6 +3,7 @@ h1{
 	margin: 30px;
 	margin-top: 75px;
 	text-align: center;
+
 }
 
 h2{
@@ -38,4 +39,17 @@ form{
 
 #todos{
 	list-style: none;
+}
+
+#animate{
+    position: relative;
+    background-color: blue;
+    color: white;
+    
+
+}
+
+.completed{
+	list-style: none;
+
 }

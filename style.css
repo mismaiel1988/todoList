@@ -30,4 +30,12 @@ form {
 #todos {
   list-style: none; }
 
+#animate {
+  position: relative;
+  background-color: blue;
+  color: white; }
+
+.completed {
+  list-style: none; }
+
 /*# sourceMappingURL=style.css.map */

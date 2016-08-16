@@ -2,19 +2,13 @@ console.log('hello world');
 
 function setUp(){
 
-
 	$("#add").click(handleAddButton);
+
 	$("ul").on("click",'input', handleCheckBoxes);
 
-	$('body').click(function(){
-		console.log('body clicked');
-	});
 
-	$('#myForm').click(function(){
-		console.log('form clicked');
-	});
-
-
+//trying to fade in "Maya's To Do List"
+ 	$('.container').fadeIn(4000);
 
 
 }
@@ -30,13 +24,12 @@ function handleAddButton(){
 
 	list.append('<li class="newItem"><input type="checkbox" name="todoItem"><label>' + newTaskVal +'</label></li>');
 
-	//creating an array out of the appended list
+	//creating an array out of the appended list for the heck of it
 	arrayList.push("<div>"+newTaskVal+"</div>");
 	console.log(arrayList);
 
+	//clear text after click
 	newTask.val('');
-
-
 }
 
 	//I'm trying to remove a clicked on div item
@@ -49,7 +42,7 @@ function handleCheckBoxes(event){
 
 	var cList =  $('.completed');
 
-// $(this).children('input').prop('checked',true);
+    //$(this).children('input').prop('checked',true);
 
   if($(this).prop('checked'))
   {
@@ -62,6 +55,12 @@ function handleCheckBoxes(event){
 	
 }
 
+function animation(){
+var title = $('#animate');
+
+	title.fadeIn(1000);
+
+}
 
 
 function newPage(){
@@ -69,5 +68,6 @@ function newPage(){
 }
 
 $(document).ready(setUp);
+
 
 
