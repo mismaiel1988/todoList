@@ -6,11 +6,6 @@ function setUp(){
 
 	$("ul").on("click",'input', handleCheckBoxes);
 
-
-//trying to fade in "Maya's To Do List"
- 	$('.container').fadeIn(4000);
-
-
 }
 
 function handleAddButton(){
@@ -22,7 +17,20 @@ function handleAddButton(){
 
 	//list.append("<div>"+newTaskVal+"</div>");
 
-	list.append('<li class="newItem"><input type="checkbox" name="todoItem"><label>' + newTaskVal +'</label></li>');
+	//list.append('<li class="newItem"><input type="checkbox" name="todoItem"><label>' + newTaskVal +'</label></li>');
+
+    var newElement = $('<li class="newItem"><input type="checkbox" name="todoItem"><label>' + newTaskVal +'</label></li>');
+
+    if (newTaskVal.length > 0){
+	    //hide the jquery wrapped element first
+		newElement.hide();
+
+		//append the hidden html element
+		list.append(newElement);
+
+		//fade it in
+		newElement.fadeIn("slow");
+    }
 
 	//creating an array out of the appended list for the heck of it
 	arrayList.push("<div>"+newTaskVal+"</div>");
@@ -46,7 +54,9 @@ function handleCheckBoxes(event){
 
   if($(this).prop('checked'))
   {
+  	cList.hide();
   	cList.append($(this).parent());
+  	cList.fadeIn('slow');
   }
    else{
    	list.append($(this).parent());
@@ -55,19 +65,13 @@ function handleCheckBoxes(event){
 	
 }
 
-/*function animation(){
-var title = $('#animate');
-
-	title.fadeIn(1000);
-
-}
-*/
-
 function newPage(){
 	window.open('form.php');
 }
 
 $(document).ready(setUp);
 
+
+ 
 
 

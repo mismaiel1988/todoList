@@ -1,14 +1,21 @@
+
+body{
+	font-family: "Courier New";
+}
+
 h1{
 	color: black;
 	margin: 30px;
 	margin-top: 75px;
 	text-align: center;
+	margin-left: 20%;
 
 }
 
 h2{
 	color: blue;
 	float: right;
+
 }
 
 form{
@@ -22,7 +29,9 @@ form{
 	height: 20px; 
 	border-width: 1px; 
 	border-style: solid;
-	border-color: blue;
+	border-color: #D900D9;
+	border-radius: 25px;
+
 }
 
 #add{
@@ -30,11 +39,16 @@ form{
 	border-width: 1px; 
 	border-style: solid;
 	border-color: black;
+	border-radius: 25px;
 }
 
 #show{
-	color: orange;
-	text-align: center;
+	color: #D900D9;
+	margin-left: 50%;
+	border: none;
+	background: white;
+
+
 }
 
 #todos{
@@ -43,13 +57,24 @@ form{
 
 #animate{
     position: relative;
-    background-color: blue;
+  
     color: white;
-    
+
 
 }
 
 .completed{
 	list-style: none;
 
+
 }
+
+hr{
+    display:block;
+    border:none;
+    color:white;
+    height:3px;
+    width: 100%;
+	background: -webkit-gradient(radial, 65% 50%, 0, 50% 65%, 350, from(#D900D9), to(pink));
+}
+
