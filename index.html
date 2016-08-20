@@ -7,50 +7,30 @@
     <script type="text/javascript" src="js.js"></script>
   </head>
   <body>
- 
- <div>
-     <div class="container">
-      <div id="animate">
-       <h1>Maya's To-Do List</h1>
-     </div>
-     <hr>
+
+    <div>
+      <div class="container">
+        <div id="animate">
+          <h1>Maya's To-Do List</h1>
+        </div>
+        <hr>
+      </div>
+
+      <label for="add" class="label-add"> New Task: </label>
+      <input id="task" type="text">
+      <button id="add">Add</button>
+    
+      <h3>To Do: </h3>
+      <form action="save.php" method="get">
+        <ul id="todos"></ul>
+        <button type="submit">Save</button>
+      </form>
+
+      <hr>
+
+      <h3> Completed: </h3>
+
+      <ul class="completed"></ul>
     </div>
-
-    New Task: 
-
-    <input id="task" type="text">
-    <button id="add">Add</button>
-
-    <h3>To Do: </h3>
-    <ul id="todos">
-    <li class="newItem">
-      <input  type="checkbox" name="todoItem" value="laundry"><label>Get Laundry</label>
-    </li>
-    <li class="newItem">
-      <input  type="checkbox" name="todoItem" value="lunch"><label>Eat Lunch</label>
-    </li>
-    <li class="newItem"><input  type="checkbox" name="todoItem" value="room"><label>Clean room</label>
-    </li>
-    <li class="newItem">
-      <input  type="checkbox" name="todoItem" value="book"><label>Read books</label>
-    </li>
-    </ul>
-
-    <button id="show" onclick="newPage()">Show Completed</button>
-    <hr> 
-
-
-
-    <h3> Completed: </h3>
-
-    <ul class="completed">
-    </ul>
-</div>
-
-<div>
-</div>
-
-
-
   </body>
 </html>
