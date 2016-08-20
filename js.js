@@ -42,6 +42,10 @@ function handleAddButton(){
 
 	//I'm trying to remove a clicked on div item
 
+function afterFadeOut(){
+
+}
+
 function handleCheckBoxes(event){
 	console.log('handleNewTask');
 	var list = $('#todos');
@@ -54,12 +58,19 @@ function handleCheckBoxes(event){
 
   if($(this).prop('checked'))
   {
-  	cList.hide();
-  	cList.append($(this).parent());
-  	cList.fadeIn('slow');
+  	// $(this).parent().hide();
+
+    var liElt = $(this).parent();
+  	liElt.fadeOut('slow', function(){
+    	cList.append(liElt);
+  	    liElt.fadeIn('slow');	
+  	});
+
   }
    else{
+   $(this).parent().hide();
    	list.append($(this).parent());
+   	$(this).parent().fadeIn('slow');
    }
 	//$(this).remove();
 	

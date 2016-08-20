@@ -1,52 +1,56 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>To Do List</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-        <script type="text/javascript" src="js.js"></script>
-    </head>
-    <body>
-       
-       <div class="container">
-          <div id="animate">
-           <h1>Maya's To-Do List</h1>
-          </div>
-          <hr>
-       </div>
+  <head>
+    <title>To Do List</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js.js"></script>
+  </head>
+  <body>
+ 
+ <div>
+     <div class="container">
+      <div id="animate">
+       <h1>Maya's To-Do List</h1>
+     </div>
+     <hr>
+    </div>
 
-          New Task:
+    New Task: 
 
-        <input id="task" type="text">
-        <button id="add">Add</button>
+    <input id="task" type="text">
+    <button id="add">Add</button>
 
-        <h3>To Do: </h3>
-        <ul id="todos">
-        <li class="newItem">
-          <input  type="checkbox" name="todoItem" value="laundry"> <label>Get Laundry</label>
-          </li>
-          <li class="newItem">
-          <input  type="checkbox" name="todoItem" value="lunch"><label> Eat Lunch</label>
-          </li>
-          <li class="newItem"><input  type="checkbox" name="todoItem" value="room"><label>Clean room</label>
-          </li>
-          <li class="newItem">
-          <input  type="checkbox" name="todoItem" value="book"><label>Read books</label>
-          </li>
-        </ul>
+    <h3>To Do: </h3>
+    <ul id="todos">
+    <li class="newItem">
+      <input  type="checkbox" name="todoItem" value="laundry"><label>Get Laundry</label>
+    </li>
+    <li class="newItem">
+      <input  type="checkbox" name="todoItem" value="lunch"><label>Eat Lunch</label>
+    </li>
+    <li class="newItem"><input  type="checkbox" name="todoItem" value="room"><label>Clean room</label>
+    </li>
+    <li class="newItem">
+      <input  type="checkbox" name="todoItem" value="book"><label>Read books</label>
+    </li>
+    </ul>
 
-         <button id="show" onclick="newPage()">Show Completed</button>
-      <hr> 
-
-     
-
-        <h3> Completed: </h3>
-
-        <ul class="completed">
-        </ul>
+    <button id="show" onclick="newPage()">Show Completed</button>
+    <hr> 
 
 
 
+    <h3> Completed: </h3>
 
-    </body>
+    <ul class="completed">
+    </ul>
+</div>
+
+<div>
+</div>
+
+
+
+  </body>
 </html>
