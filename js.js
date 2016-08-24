@@ -16,7 +16,7 @@ function handleAddButton(){
   var arrayList = [];
 
 
-  var newElement = $('<li class="newItem"><input type="checkbox" name="todoItem"><label>' + newTaskVal +'</label></li>');
+  var newElement = $('<li class="newItem"><input type="checkbox" name="todoItem" value= '+ newTaskVal +' ><label>' + newTaskVal +'</label></li>');
 
   if (newTaskVal.length > 0){
     // We are hiding first because the newly added element has

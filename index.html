@@ -16,21 +16,34 @@
         <hr>
       </div>
 
+      <?php
+      echo ("hello");
+      ?>
+
       <label for="add" class="label-add"> New Task: </label>
       <input id="task" type="text">
       <button id="add">Add</button>
     
       <h3>To Do: </h3>
-      <form action="save.php" method="get">
-        <ul id="todos"></ul>
-        <button type="submit">Save</button>
-      </form>
 
+      <ul id="todos"></ul>
+      
       <hr>
 
       <h3> Completed: </h3>
 
-      <ul class="completed"></ul>
+
+
+      <form action="save.php" method="POST">
+    
+        <ul class="completed"></ul>
+     
+        <button type="submit">Save</button>
+
+      </form>
+
+
+
     </div>
   </body>
 </html>
