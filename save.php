@@ -1,25 +1,44 @@
-<?php
+<html>
+<body>
+  <?php
 
-$link = mysql_connect('localhost','todo_items','root');
+  $user = 'root';
+  $password = 'root';
+  $db = 'Tasks';
+  $host = 'localhost';
+  $port = 8889;
 
-if(!$link){
-	die('could not connect'.mysql_error());
+  $link = mysql_connect(
+     "$host:$port", 
+     $user, 
+     $password
+  );
+  $db_selected = mysql_select_db(
+     $db, 
+     $link
+  );
 
-}
+  if (!$link)
+    {
+    die('Could not connect: ' . mysql_error());
+    }
+   
+  mysql_select_db($db_selected);
+   
+  $sql="INSERT INTO Tasks (todo_items)
+  VALUES
+  ('$_POST['todoItem']')";
+   
+  if (!mysql_query($sql,$link))
+    {
+    die('Error: ' . mysql_error());
+    }
+  echo "1 record added";
+   
+  mysql_close($link);
+  
 
-$db_selected = mysql_select_db('todo_items', $link);
-
-if (!$db_selected){
-	die('could not connect'.mysql_error());
-}
-echo 'connected successfully';
-
-$sql = "INSERT INTO todo_items (task) VALUES ('todoItem');
-
-if(mysqli_query($link, $sql)){
-    echo "Records added successfully.";
-} else {
-    echo "ERROR: Could not able to execute $sql." . mysqli_error($link);
-}
 
 ?>
+</body>
+</html>
